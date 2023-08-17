@@ -126,3 +126,13 @@ body{
 .chat-input textarea:valid ~ span{
     visibility: visible;
 }
+
+
+@media(max-width:799px) {
+    .chatbot{
+     
+        width:350px;
+      ;
+    }
+    
+}

@@ -20,6 +20,7 @@ const handleChat = () => {
   userMessage = chatInput.value.trim();
   if (!userMessage) return;
   chatInput.value = "";
+  
   chatbox.appendChild(creatChatLi(userMessage, "outgoing"));
 
   setTimeout(() => {
@@ -42,7 +43,7 @@ const handleChat = () => {
 
   // Define patterns and corresponding responses
   const patterns = [
-    { pattern: /hi|hey/gi, response: "Hello wellcome to DAV College Chatbot. How can i help you?" },
+    { pattern: /hello|hi|hey/gi, response: "Hello wellcome to DAV College Chatbot. How can i help you?" },
     { pattern: /name/gi, response: "My name is ChatBot." },
     { pattern: /favorite color|favourite color/gi, response: "I don't have a favorite color, I'm a bot!" },
     { pattern: /old|age/gi, response: "I am just a program, so I don't have an age." },
@@ -66,7 +67,7 @@ const handleChat = () => {
 
 }
 sendChatBtn.addEventListener("click", handleChat);
-
+chatbox.appendChild(creatChatLi("Hello wellcome to DAV College Chatbot. How can i help you?", "incoming"));
 
 
 document.getElementById('mytextarea').addEventListener('keydown', function (event) {
