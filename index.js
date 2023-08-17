@@ -67,7 +67,12 @@ const handleChat = () => {
 
 }
 sendChatBtn.addEventListener("click", handleChat);
-chatbox.appendChild(creatChatLi("Hello wellcome to DAV College Chatbot. How can i help you?", "incoming"));
+
+setTimeout(() => {
+
+  chatbox.appendChild(creatChatLi("Hello wellcome to DAV College Chatbot. How can i help you?", "incoming"));
+
+}, 600);
 
 
 document.getElementById('mytextarea').addEventListener('keydown', function (event) {
